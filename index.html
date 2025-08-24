@@ -57,20 +57,20 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://i-am-future.github.io/" target="_blank">Lai Wei</a><sup>*</sup>,</span>
+                <a href="https://i-am-future.github.io/" target="_blank">Lai Wei</a><sup>1*</sup>,</span>
               <span class="author-block">
-                <a href="https://gaavama.github.io/" target="_blank">Jiahua Ma</a><sup>*</sup>,</span>
+                <a href="https://gaavama.github.io/" target="_blank">Jiahua Ma</a><sup>2*</sup>,</span>
               <span class="author-block">
-                <a href="https://i-am-future.github.io/safediff/" target="_blank">Yibo Hu</a>
+                <a href="https://i-am-future.github.io/safediff/" target="_blank">Yibo Hu</a><sup>3</sup>,
               </span>
               <span class="author-block">
-                <a href="http://www.zhangruimao.site/" target="_blank">Ruimao Zhang</a>
+                <a href="http://www.zhangruimao.site/" target="_blank">Ruimao Zhang</a><sup>2</sup>
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>UC San Diego; <sup>2</sup> Sun Yat-sen University; <sup>3</sup> Zhejiang University 
-                <br>Conferance name and year</span>
+              <span class="author-block"><sup>1</sup>UC San Diego <sup>2</sup> Sun Yat-sen University <sup>3</sup> Zhejiang University 
+                <br>CoRL 2025</span>
               <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
             </div>
 
@@ -78,7 +78,7 @@
               <div class="publication-links">
                 <!-- Arxiv PDF link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                  <a href="https://arxiv.org/pdf/2412.10349" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -142,11 +142,13 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus.
-              Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a
-              vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac
-              gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed
-              vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+              In unstructured environments, robotic manipulation tasks involving objects with constrained motion trajectories—such as door opening—often experience discrepancies between the robot's vision-guided end-effector trajectory and the object's constrained motion path. 
+              Such discrepancies generate unintended harmful forces, which, if exacerbated, may lead to task failure and potential damage to the manipulated objects or the robot itself. 
+              To address this issue, this paper introduces a novel diffusion framework, termed SafeDiff. 
+              Unlike conventional methods that sequentially fuse visual and tactile data to predict future robot states, our approach generates a prospective state sequence based on the current robot state and visual context observations, using real-time force feedback as a calibration signal. 
+              This implicitly adjusts the robot's state within the state space, enhancing operational success rates and significantly reducing harmful forces during manipulation, thus ensuring manipulation force safety. 
+              Additionally, we develop a large-scale simulation dataset named SafeDoorManip50k, offering extensive multimodal data to train and evaluate the proposed method. 
+              Extensive experiments show that our visual-tactile model substantially mitigates the risk of harmful forces in the door opening task, across both simulated and real-world settings.
             </p>
           </div>
         </div>
@@ -195,79 +197,6 @@
   </section>
   <!-- End image carousel -->
 
-
-
-
-  <!-- Youtube video -->
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <!-- Paper video. -->
-        <h2 class="title is-3">Video Presentation</h2>
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-
-            <div class="publication-video">
-              <!-- Youtube embed code here -->
-              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media"
-                allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End youtube video -->
-
-
-  <!-- Video carousel -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3">Another Carousel</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-video1">
-            <video poster="" id="video1" autoplay controls muted loop height="100%">
-              <!-- Your video file here -->
-              <source src="static/videos/carousel1.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-video2">
-            <video poster="" id="video2" autoplay controls muted loop height="100%">
-              <!-- Your video file here -->
-              <source src="static/videos/carousel2.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-video3">
-            <video poster="" id="video3" autoplay controls muted loop height="100%">\
-              <!-- Your video file here -->
-              <source src="static/videos/carousel3.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End video carousel -->
-
-
-
-
-
-
-  <!-- Paper poster -->
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title">Poster</h2>
-
-        <iframe src="static/pdfs/sample.pdf" width="100%" height="550">
-        </iframe>
-
-      </div>
-    </div>
-  </section>
-  <!--End paper poster -->
 
 
   <!--BibTex citation -->
