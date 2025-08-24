@@ -54,6 +54,11 @@
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Ensuring Force Safety in Vision-Guided Robotic Manipulation via
               Implicit Tactile Calibration</h1>
+            <h1 class="title is-4 publication-title" style="color: #ff0000;
+                      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                      font-weight: 700;">
+              CoRL 2025
+            </h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -69,8 +74,8 @@
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>UC San Diego <sup>2</sup> Sun Yat-sen University <sup>3</sup> Zhejiang University 
-                <br>CoRL 2025</span>
+              <span class="author-block"><sup>1</sup>UC San Diego <sup>2</sup> Sun Yat-sen University <sup>3</sup>
+                Zhejiang University</span>
               <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
             </div>
 
@@ -142,13 +147,21 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              In unstructured environments, robotic manipulation tasks involving objects with constrained motion trajectories—such as door opening—often experience discrepancies between the robot's vision-guided end-effector trajectory and the object's constrained motion path. 
-              Such discrepancies generate unintended harmful forces, which, if exacerbated, may lead to task failure and potential damage to the manipulated objects or the robot itself. 
-              To address this issue, this paper introduces a novel diffusion framework, termed SafeDiff. 
-              Unlike conventional methods that sequentially fuse visual and tactile data to predict future robot states, our approach generates a prospective state sequence based on the current robot state and visual context observations, using real-time force feedback as a calibration signal. 
-              This implicitly adjusts the robot's state within the state space, enhancing operational success rates and significantly reducing harmful forces during manipulation, thus ensuring manipulation force safety. 
-              Additionally, we develop a large-scale simulation dataset named SafeDoorManip50k, offering extensive multimodal data to train and evaluate the proposed method. 
-              Extensive experiments show that our visual-tactile model substantially mitigates the risk of harmful forces in the door opening task, across both simulated and real-world settings.
+              In unstructured environments, robotic manipulation tasks involving objects with constrained motion
+              trajectories—such as door opening—often experience discrepancies between the robot's vision-guided
+              end-effector trajectory and the object's constrained motion path.
+              Such discrepancies generate unintended harmful forces, which, if exacerbated, may lead to task failure and
+              potential damage to the manipulated objects or the robot itself.
+              To address this issue, this paper introduces a novel diffusion framework, termed SafeDiff.
+              Unlike conventional methods that sequentially fuse visual and tactile data to predict future robot states,
+              our approach generates a prospective state sequence based on the current robot state and visual context
+              observations, using real-time force feedback as a calibration signal.
+              This implicitly adjusts the robot's state within the state space, enhancing operational success rates and
+              significantly reducing harmful forces during manipulation, thus ensuring manipulation force safety.
+              Additionally, we develop a large-scale simulation dataset named SafeDoorManip50k, offering extensive
+              multimodal data to train and evaluate the proposed method.
+              Extensive experiments show that our visual-tactile model substantially mitigates the risk of harmful
+              forces in the door opening task, across both simulated and real-world settings.
             </p>
           </div>
         </div>
@@ -158,46 +171,35 @@
   <!-- End paper abstract -->
 
 
-  <!-- Image carousel -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
-            <h2 class="subtitle has-text-centered">
-              First image description.
-            </h2>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
-            <h2 class="subtitle has-text-centered">
-              Second image description.
-            </h2>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
-            <h2 class="subtitle has-text-centered">
-              Third image description.
-            </h2>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
-            <h2 class="subtitle has-text-centered">
-              Fourth image description.
-            </h2>
-          </div>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+          <h2 class="title is-3">Method Overview</h2>
         </div>
       </div>
     </div>
   </section>
-  <!-- End image carousel -->
 
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+          <h2 class="title is-3">Quantitative Results</h2>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+          <h2 class="title is-3">Real World Experiment Visualization</h2>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!--BibTex citation -->
   <section class="section" id="BibTeX">
