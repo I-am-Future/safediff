@@ -230,6 +230,42 @@
   </section>
   <!-- End Method Overview Section -->
 
+
+  <section class="section" id="experiment-visualization">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Experiment Visualization</h2>
+      <div class="columns is-vcentered mt-4">
+        <!-- Column 1: Simulation / or first experiment video -->
+        <div class="column">
+          <div class="box" style="padding:1rem;">
+            <video autoplay muted loop playsinline controls style="width:100%;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+              <source src="static/videos/real-main-video-small.mp4" type="video/mp4" />
+            </video>
+            <p class="is-size-6 has-text-centered mt-3">
+              Real-world rollout on two different doors 
+              <br>
+              left: seen in training; wooden textured, radius=0.8<em>m</em>
+              <br>
+              right: unseen in training; metal textured, radius=0.6<em>m</em>
+            </p>
+          </div>
+        </div>
+        <!-- Column 2: Real-world force visualization video -->
+        <div class="column">
+          <div class="box" style="padding:1rem;">
+            <video autoplay muted loop playsinline controls style="width:100%;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+              <source src="static/videos/real-anti-disturbance-small.mp4" type="video/mp4" />
+            </video>
+            <p class="is-size-6 has-text-centered mt-3">
+              Anti-disturbance study in real: a 20 <em>N</em> force is applied to the robot's end-effector. 
+              The robot learnt to resist the disturbance and continue opening the door.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="dataset-visualization">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Dataset Visualization</h2>
@@ -246,7 +282,7 @@
         <div class="column is-6">
           <div class="content">
             <p>
-              We curate a large-scale door-manipulation dataset in <em>Isaac Gym</em> to train and evaluate
+              We create a large-scale door-manipulation dataset in <em>Isaac Gym</em> to train and evaluate
               <b>SafeDiff</b>, covering both seen and unseen doors with ground-truth contact forces.
             </p>
             <ul>
@@ -265,15 +301,6 @@
   </section>
   <!-- End Dataset Visualization Section -->
 
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <div class="columns is-centered has-text-centered">
-          <h2 class="title is-3">Experiment Visualization</h2>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section class="hero teaser">
     <div class="container is-max-desktop">
@@ -359,3 +386,4 @@
 </body>
 
 </html>
+``` 
