@@ -233,16 +233,19 @@
 
   <section class="section" id="experiment-visualization">
     <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Experiment Visualization</h2>
-      <div class="columns is-vcentered mt-4">
+      <h2 class="title is-3 has-text-centered">Experiment Results</h2>
+
+      <h3 class="title is-4 mt-5">Door opening task</h3>
+      <div class="columns is-vcentered mt-3">
         <!-- Column 1: Simulation / or first experiment video -->
         <div class="column">
           <div class="box" style="padding:1rem;">
-            <video autoplay muted loop playsinline controls style="width:100%;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+            <video autoplay muted loop playsinline controls
+              style="width:100%;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
               <source src="static/videos/real-main-video-small.mp4" type="video/mp4" />
             </video>
             <p class="is-size-6 has-text-centered mt-3">
-              Real-world rollout on two different doors 
+              Real-world rollout on two different doors
               <br>
               left: seen in training; wooden textured, radius=0.8<em>m</em>
               <br>
@@ -253,16 +256,56 @@
         <!-- Column 2: Real-world force visualization video -->
         <div class="column">
           <div class="box" style="padding:1rem;">
-            <video autoplay muted loop playsinline controls style="width:100%;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+            <video autoplay muted loop playsinline controls
+              style="width:100%;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
               <source src="static/videos/real-anti-disturbance-small.mp4" type="video/mp4" />
             </video>
             <p class="is-size-6 has-text-centered mt-3">
-              Anti-disturbance study in real: a 20 <em>N</em> force is applied to the robot's end-effector. 
+              Anti-disturbance study in real: a 20 <em>N</em> force is applied to the robot's end-effector.
               The robot learnt to resist the disturbance and continue opening the door.
             </p>
           </div>
         </div>
       </div>
+
+      <h3 class="title is-4">Two more tasks</h3>
+      <!-- Two rows: each row = image + video side-by-side in one container -->
+      <div class="box" style="padding:1.25rem;">
+        <!-- Row 1 -->
+        <div class="columns is-vcentered mb-4">
+          <div class="column is-9">
+            <figure class="image">
+              <img src="static/images/othertasks-1.jpg" alt="Drawer opening task snapshot" style="border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+            </figure>
+            <p class="is-size-7 has-text-centered mt-2">Snapshot: Drawer opening setup.
+              The robot opened the drawer along the <b>linear</b> constrained track.
+            </p>
+          </div>
+          <div class="column is-3">
+            <video autoplay muted loop playsinline controls style="width:100%;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+              <source src="static/videos/real-opendrawer-small.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <hr class="my-3">
+        <!-- Row 2 -->
+        <div class="columns is-vcentered">
+          <div class="column is-9">
+            <figure class="image">
+              <img src="static/images/othertasks-2.jpg" alt="Wheel turning task snapshot" style="border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+            </figure>
+            <p class="is-size-7 has-text-centered mt-2">Snapshot: Wheel turning setup.
+              The robot rotated the turning wheel along the <b>circular</b> constraint track.
+            </p>
+          </div>
+          <div class="column is-3">
+            <video autoplay muted loop playsinline controls style="width:100%;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+              <source src="static/videos/real-turnwheel-small.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -286,7 +329,8 @@
               <b>SafeDiff</b>, covering both seen and unseen doors with ground-truth contact forces.
             </p>
             <ul>
-              <li>The type, size, and position of the doors, mechanical properties of hinges, stiffness of robots, and lighting conditions were randomized</li>
+              <li>The type, size, and position of the doors, mechanical properties of hinges, stiffness of robots, and
+                lighting conditions were randomized</li>
               <li><strong>47,727</strong> training demonstrations</li>
               <li><strong>4,580</strong> test scenarios on the <em>seen-door</em> set; </li>
               <li><strong>4,438</strong> on the<em>unseen-door</em> set</li>
@@ -386,4 +430,3 @@
 </body>
 
 </html>
-``` 
