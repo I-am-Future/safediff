@@ -53,7 +53,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Ensuring Force Safety in Vision-Guided Robotic Manipulation via
+            <h1 class="title is-2 publication-title">Ensuring Force Safety in Vision-Guided Robotic Manipulation via
               Implicit Tactile Calibration</h1>
             <h1 class="title is-4 publication-title" style="color: #ff0000;
                       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -70,14 +70,16 @@
                 <a href="https://i-am-future.github.io/safediff/" target="_blank">Yibo Hu</a><sup>3</sup>,
               </span>
               <span class="author-block">
-                <a href="http://www.zhangruimao.site/" target="_blank">Ruimao Zhang</a><sup>1</sup>
+                <a href="http://www.zhangruimao.site/" target="_blank">Ruimao Zhang</a><sup>1✉</sup>
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>Sun Yat-sen University <sup>2</sup> UC San Diego <sup>3</sup>
                 Zhejiang University</span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small>
+                <small><sup>✉</sup>Corresponding Author
+              </span>
             </div>
 
             <div class="column has-text-centered">
@@ -129,67 +131,139 @@
       <div class="hero-body">
         <video poster="" id="tree" autoplay controls muted loop height="100%">
           <!-- Your video here -->
-          <source src="static/videos/banner_video.mp4" type="video/mp4">
+          <source src="static/videos/teaser-video-small.mp4" type="video/mp4">
         </video>
-        <h2 class="subtitle has-text-centered">
+        <!-- <h2 class="subtitle has-text-centered">
           Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat
           pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
-        </h2>
+        </h2> -->
       </div>
     </div>
   </section>
   <!-- End teaser video -->
 
-  <!-- Paper abstract -->
-  <section class="section hero is-light">
+  <!-- Paper abstract (collapsible) -->
+  <section class="section hero is-light" id="abstract">
     <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              In unstructured environments, robotic manipulation tasks involving objects with constrained motion
-              trajectories—such as door opening—often experience discrepancies between the robot's vision-guided
-              end-effector trajectory and the object's constrained motion path.
-              Such discrepancies generate unintended harmful forces, which, if exacerbated, may lead to task failure and
-              potential damage to the manipulated objects or the robot itself.
-              To address this issue, this paper introduces a novel diffusion framework, termed SafeDiff.
-              Unlike conventional methods that sequentially fuse visual and tactile data to predict future robot states,
-              our approach generates a prospective state sequence based on the current robot state and visual context
-              observations, using real-time force feedback as a calibration signal.
-              This implicitly adjusts the robot's state within the state space, enhancing operational success rates and
-              significantly reducing harmful forces during manipulation, thus ensuring manipulation force safety.
-              Additionally, we develop a large-scale simulation dataset named SafeDoorManip50k, offering extensive
-              multimodal data to train and evaluate the proposed method.
-              Extensive experiments show that our visual-tactile model substantially mitigates the risk of harmful
-              forces in the door opening task, across both simulated and real-world settings.
-            </p>
+      <details class="abstract-collapsible">
+        <summary class="is-flex is-align-items-center" style="cursor:pointer;">
+          <h2 class="title is-3 mb-0">Abstract</h2>
+          <span class="tag is-link is-light ml-3" id="abstract-toggle-text">Show</span>
+        </summary>
+        <div class="content has-text-justified mt-4">
+          <p>
+            In unstructured environments, robotic manipulation tasks involving objects with constrained motion
+            trajectories—such as door opening—often experience discrepancies between the robot's vision-guided
+            end-effector trajectory and the object's constrained motion path.
+            Such discrepancies generate unintended harmful forces, which, if exacerbated, may lead to task failure and
+            potential damage to the manipulated objects or the robot itself.
+            To address this issue, this paper introduces a novel diffusion framework, termed <b>SafeDiff</b>.
+            Unlike conventional methods that sequentially fuse visual and tactile data to predict future robot states,
+            our approach generates a prospective state sequence based on the current robot state and visual context
+            observations, using real-time force feedback as a calibration signal.
+            This implicitly adjusts the robot's state within the state space, enhancing operational success rates and
+            significantly reducing harmful forces during manipulation, thus ensuring manipulation force safety.
+            Additionally, we develop a large-scale simulation dataset named <b>SafeDoorManip50k</b>, offering
+            extensive
+            multimodal data to train and evaluate the proposed method.
+            Extensive experiments show that our visual-tactile model substantially mitigates the risk of harmful
+            forces in the door opening task, across both simulated and real-world settings.
+          </p>
+        </div>
+      </details>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Motivation Section replaced with image + text layout -->
+  <section class="section" id="motivation">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Motivation</h2>
+      <div class="columns is-vcentered">
+        <!-- Left: Image -->
+        <div class="column is-half">
+          <figure class="image">
+            <img src="static/images/fig1-intro.jpg" alt="Illustration of force-safe manipulation"
+              style="border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+            <figcaption>
+            </figcaption>
+          </figure>
+          <p class="has-text-grey is-size-7 has-text-centered mt-2"></p>
+        </div>
+        <!-- Right: Text Content -->
+        <div class="column is-half">
+          <div class="content">
+            End-effector force decomposition: F<sub>z</sub> (tangent to the door’s opening path) is the
+            <strong>effective</strong> force, while F<sub>x</sub> and F<sub>y</sub> in the x–y plane are orthogonal to
+            the trajectory and potentially <strong>harmful</strong>.
+            These forces might cause damage to both the robot and the door and are referred to as harmful forces.
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End paper abstract -->
+  <!-- End Motivation Section -->
 
-  <section class="hero teaser">
+  <!-- Replace Method Overview hero teaser with image + paragraph layout -->
+  <section class="section" id="method-overview">
     <div class="container is-max-desktop">
-      <div class="hero-body">
-        <div class="columns is-centered has-text-centered">
-          <h2 class="title is-3">Motivation</h2>
+      <h2 class="title is-3 has-text-centered">Method Overview</h2>
+      <div class="columns is-centered">
+        <div class="column is-12 has-text-centered">
+          <figure class="image">
+            <img src="static/images/framework.png" alt="SafeDiff framework overview"
+              style="border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+          </figure>
+          <p class="mt-4 has-text-justified">
+            SafeDiff is a visual-tactile diffusion policy that generates short-horizon
+            <strong>robot state sequences</strong> (not actions) for safe door manipulation.
+            An encoder of stacked <strong>Vision-Guided Mapping Modules (VMMs)</strong>
+            conditions Gaussian noise on the current image and robot state via FiLM and temporal
+            attention to propose a trajectory. A decoder of
+            <strong>Tactile-Guided Calibration Modules (TCMs)</strong> then refines this
+            trajectory using force feedback with cross-attention, applying residual corrections
+            that suppress harmful forces while keeping motion smooth and feasible.
+          </p>
         </div>
       </div>
     </div>
   </section>
+  <!-- End Method Overview Section -->
 
-  <section class="hero teaser">
+  <section class="section" id="dataset-visualization">
     <div class="container is-max-desktop">
-      <div class="hero-body">
-        <div class="columns is-centered has-text-centered">
-          <h2 class="title is-3">Method Overview</h2>
+      <h2 class="title is-3 has-text-centered">Dataset Visualization</h2>
+      <div class="columns is-vcentered">
+        <!-- Left: Videos -->
+        <div class="column is-6">
+          <div class="mb-4">
+            <video poster="" id="tree" autoplay controls muted loop height="100%">
+              <source src="static/videos/sim-dataset-viz-small.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <!-- Right: Text -->
+        <div class="column is-6">
+          <div class="content">
+            <p>
+              We curate a large-scale door-manipulation dataset in <em>Isaac Gym</em> to train and evaluate
+              <b>SafeDiff</b>, covering both seen and unseen doors with ground-truth contact forces.
+            </p>
+            <ul>
+              <li>The type, size, and position of the doors, mechanical properties of hinges, stiffness of robots, and lighting conditions were randomized</li>
+              <li><strong>47,727</strong> training demonstrations</li>
+              <li><strong>4,580</strong> test scenarios on the <em>seen-door</em> set; </li>
+              <li><strong>4,438</strong> on the<em>unseen-door</em> set</li>
+              <li><strong>45</strong> seen doors and <strong>12</strong> unseen doors</li>
+              <li>Door mesh is from <a href="https://unidoormanip.github.io/" target="_blank">UnidoorManip</a>, which is
+                gently modified for accurate force measurement in the simulation </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
+  <!-- End Dataset Visualization Section -->
 
   <section class="hero teaser">
     <div class="container is-max-desktop">
@@ -207,6 +281,21 @@
         <div class="columns is-centered has-text-centered">
           <h2 class="title is-3">Quantitative Results</h2>
         </div>
+        <p>
+          Our <b>SafeDiff</b> model outperforms baselines by a large margin in both reducing harmful forces and
+          improving task success rates in the door opening task.
+          For the detailed analysis, please refer to our paper.
+        </p>
+        <!-- Added two images stacked (row by row) -->
+        <figure class="image mb-5">
+          <img src="static/images/sim-results.png" alt="Simulation quantitative results table"
+            style="width:70%;display:block;margin:0 auto;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+        </figure>
+        <figure class="image mb-5">
+          <img src="static/images/real-results.png" alt="Real-world quantitative results table"
+            style="width:70%;display:block;margin:0 auto;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+        </figure>
+
       </div>
     </div>
   </section>
@@ -253,6 +342,19 @@
   <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
   <!-- End of Statcounter Code -->
+
+  <script>
+    // Toggle label text for abstract collapsible
+    document.addEventListener('DOMContentLoaded', () => {
+      const details = document.querySelector('.abstract-collapsible');
+      const label = document.getElementById('abstract-toggle-text');
+      if (details && label) {
+        details.addEventListener('toggle', () => {
+          label.textContent = details.open ? 'Hide' : 'Show';
+        });
+      }
+    });
+  </script>
 
 </body>
 
